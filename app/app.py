@@ -8,22 +8,6 @@ import auth
 import shutil
 import subprocess
 
-
-st.sidebar.write("iverilog:", shutil.which("iverilog"))
-st.sidebar.write("vvp:", shutil.which("vvp"))
-
-try:
-    out = subprocess.run(
-        ["iverilog", "-V"],
-        capture_output=True,
-        text=True,
-    )
-    st.sidebar.code(out.stdout)
-except Exception as e:
-    st.sidebar.error(str(e))
-st.set_page_config(page_title="HDLCode", page_icon="🔧", layout="wide")
-db.init_db()
-
 PROBLEMS_BY_ID = {p["id"]: p for p in PROBLEMS}
 
 # ---------------------------------------------------------------- session state
