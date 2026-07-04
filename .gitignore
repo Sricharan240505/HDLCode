@@ -1,0 +1,18 @@
+# IDE
+.idea/
+
+# Streamlit secrets
+app/.streamlit/secrets.toml
+
+# Database
+app/hdlcode.db
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Simulation outputs
+*.vcd
+*.out
+sim.out
