@@ -8,6 +8,10 @@ import auth
 import shutil
 import subprocess
 
+
+st.set_page_config(page_title="HDLCode", page_icon="🔧", layout="wide")
+db.init_db()
+
 PROBLEMS_BY_ID = {p["id"]: p for p in PROBLEMS}
 
 # ---------------------------------------------------------------- session state
